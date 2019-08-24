@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_main">
+
+    <ImageButton
+        android:id="@+id/first_menu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/rounded_menu"
+        android:contentDescription="@string/menu"
+        app:srcCompat="@drawable/alam"
+        app:layout_constraintEnd_toStartOf="@id/second_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/second_menu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/rounded_menu"
+        android:contentDescription="@string/menu"
+        app:srcCompat="@drawable/kota"
+        app:layout_constraintEnd_toStartOf="@id/third_menu"
+        app:layout_constraintStart_toEndOf="@id/first_menu"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/third_menu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/rounded_menu"
+        android:contentDescription="@string/menu"
+        app:srcCompat="@drawable/wisata"
+        app:layout_constraintEnd_toStartOf="@id/fourth_menu"
+        app:layout_constraintStart_toEndOf="@id/second_menu"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/fourth_menu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_menu"
+        android:contentDescription="@string/menu"
+        app:srcCompat="@drawable/rekreasi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/third_menu"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/fifth_menu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/rounded_menu"
+        android:contentDescription="@string/menu"
+        app:srcCompat="@drawable/budaya"
+        app:layout_constraintEnd_toStartOf="@id/sixth_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_menu" />
+
+    <ImageButton
+        android:id="@+id/sixth_menu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/rounded_menu"
+        android:contentDescription="@string/menu"
+        app:srcCompat="@drawable/event"
+        app:layout_constraintEnd_toStartOf="@id/seventh_menu"
+        app:layout_constraintStart_toEndOf="@id/fifth_menu"
+        app:layout_constraintTop_toBottomOf="@id/second_menu" />
+
+    <ImageButton
+        android:id="@+id/seventh_menu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:srcCompat="@drawable/photography"
+        android:background="@drawable/rounded_menu"
+        android:contentDescription="@string/menu"
+        app:layout_constraintEnd_toStartOf="@id/eight_menu"
+        app:layout_constraintStart_toEndOf="@id/sixth_menu"
+        app:layout_constraintTop_toBottomOf="@id/third_menu" />
+
+    <ImageButton
+        android:id="@+id/eight_menu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rounded_menu"
+        android:contentDescription="@string/menu"
+        app:srcCompat="@drawable/kuliner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/seventh_menu"
+        app:layout_constraintTop_toBottomOf="@id/fourth_menu" />
+
+
+</android.support.constraint.ConstraintLayout>

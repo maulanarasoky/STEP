@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/carouselview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:fillColor="#FFFFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:pageColor="#00000000"
+            app:radius="6dp"
+            app:slideInterval="3000"
+            app:strokeColor="#FF777777"
+            app:strokeWidth="1dp" />
+
+        <TextView
+            android:id="@+id/search_view"
+            android:layout_width="291dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rounded_search_view"
+            android:drawableStart="@drawable/ic_search_gray"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            app:layout_constraintEnd_toEndOf="@+id/carouselview"
+            app:layout_constraintHorizontal_bias="0.535"
+            app:layout_constraintStart_toStartOf="@+id/carouselview"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--        <android.support.v7.widget.RecyclerView-->
+<!--            android:id="@+id/recyclerView"-->
+<!--            android:layout_width="350dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/activity_horizontal_margin"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:layout_marginEnd="@dimen/activity_horizontal_margin"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/main_menu"-->
+<!--            app:layout_constraintHorizontal_bias="0.512"-->
+<!--            app:layout_constraintStart_toStartOf="@id/main_menu"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/main_menu" />-->
+
+        <include
+            android:id="@+id/headline"
+            layout="@layout/headline"
+            android:layout_width="341dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/search_view"
+            app:layout_constraintStart_toStartOf="@+id/search_view"
+            app:layout_constraintTop_toBottomOf="@+id/search_view" />
+
+        <include
+            android:id="@+id/main_menu"
+            layout="@layout/home_screen_menu"
+            android:layout_width="341dp"
+            android:layout_height="149dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="@+id/headline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/headline"
+            app:layout_constraintTop_toBottomOf="@id/headline" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
