@@ -1,5 +1,6 @@
 package com.example.step.adapter;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.step.R;
+import com.example.step.activity.DetailsActivity;
 import com.example.step.data.AllPlaceData;
 
 import java.util.ArrayList;
@@ -36,7 +38,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ListViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListViewHolder listViewHolder, int position) {
+    public void onBindViewHolder(@NonNull final ListViewHolder listViewHolder, final int position) {
         listViewHolder.title.setText(data.get(position).getTitle());
         listViewHolder.location.setText(data.get(position).getLocation());
         if (data.get(position).getPrice().equals("0")) {
@@ -69,10 +71,19 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ListViewHolder
         }
 
         Glide.with(listViewHolder.itemView.getContext())
-                .load(R.drawable.carousel_1)
+                .load(data.get(position).getPhoto())
                 .into(listViewHolder.imgPhoto);
 
         listViewHolder.imgPhoto.setContentDescription(data.get(position).getTitle());
+
+        listViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(listViewHolder.itemView.getContext(), DetailsActivity.class);
+                intent.putExtra(DetailsActivity.DATA, data.get(position));
+                listViewHolder.itemView.getContext().startActivity(intent);
+            }
+        });
     }
 
     public void filterList(ArrayList<AllPlaceData> filteredList) {
