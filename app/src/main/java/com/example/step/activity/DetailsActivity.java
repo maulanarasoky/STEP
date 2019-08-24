@@ -26,7 +26,7 @@ public class DetailsActivity extends AppCompatActivity {
     CollapsingToolbarLayout collapsingToolbarLayout;
     Toolbar toolbar;
 
-    ImageView otherImg1, otherImg2, otherImg3, otherImg4;
+    ImageView otherImg1, otherImg2, otherImg3, otherImg4, otherImg5, otherImg6, otherImg7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +69,9 @@ public class DetailsActivity extends AppCompatActivity {
         otherImg2 = findViewById(R.id.other_img2);
         otherImg3 = findViewById(R.id.other_img3);
         otherImg4 = findViewById(R.id.other_img4);
+        otherImg5 = findViewById(R.id.other_img5);
+        otherImg6 = findViewById(R.id.other_img6);
+        otherImg7 = findViewById(R.id.other_img7);
 
 
     }
@@ -92,6 +95,9 @@ public class DetailsActivity extends AppCompatActivity {
         Glide.with(this).load(allPlaceData.getPhoto()).into(otherImg2);
         Glide.with(this).load(allPlaceData.getPhoto()).into(otherImg3);
         Glide.with(this).load(allPlaceData.getPhoto()).into(otherImg4);
+        Glide.with(this).load(allPlaceData.getPhoto()).into(otherImg5);
+        Glide.with(this).load(allPlaceData.getPhoto()).into(otherImg6);
+        Glide.with(this).load(allPlaceData.getPhoto()).into(otherImg7);
     }
 
     @Override
